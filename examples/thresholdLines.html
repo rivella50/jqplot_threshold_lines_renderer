@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Threshold Lines Example</title>
+  <!--[if IE]><script language="javascript" type="text/javascript" src="../excanvas.min.js"></script><![endif]-->
+  <link rel="stylesheet" type="text/css" href="../jquery.jqplot.min.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+  
+  <!-- BEGIN: load jquery -->
+  <script language="javascript" type="text/javascript" src="../jquery-1.4.2.min.js"></script>
+  <!-- END: load jquery -->
+  
+  <!-- BEGIN: load jqplot -->
+  <script language="javascript" type="text/javascript" src="../jquery.jqplot.min.js"></script>
+  <script language="javascript" type="text/javascript" src="../plugins/jqplot.dateAxisRenderer.min.js"></script>
+  <script language="javascript" type="text/javascript" src="../plugins/jqplot.canvasThresholdLinesRenderer.js"></script>
+  <!-- END: load jqplot -->
+  <style type="text/css" media="screen">
+    .jqplot-axis {
+      font-size: 0.85em;
+    }
+  </style>
+  <script type="text/javascript" language="javascript">
+  
+  $(document).ready(function(){
+
+			line1 = [[1244337000000, 1550], [1244337300000, 1000], [1244337600000, 350], [1244337900000, 770], [1244338200000, 214]];
+			var plot2 = $.jqplot('chart', [line1], {
+    		title: 'Threshold Lines Example',
+        seriesDefaults: {
+	  			thresholdLines: {
+		        color: '#8f8f8f',
+						yValues: [1100.0, 780.0, 260.0, 2200.0],
+						showLabel: true,
+						labelLocation: 'se'
+	        }
+        },
+    		axes: {
+        	xaxis: {
+            renderer: $.jqplot.DateAxisRenderer,
+            numberTicks: 5
+        	}
+    		},
+    		series:[{},{lineWidth:1, color:'#999999', showMarker:false}]
+        
+			});
+
+  });
+
+  </script>
+  </head>
+  <body>
+<?php include "nav.inc"; ?>
+    <div id="chart" style="margin-top:20px; margin-left:20px; width:500px; height:400px;"></div>
+  </body>
+</html>
