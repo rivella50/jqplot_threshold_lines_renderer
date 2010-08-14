@@ -15,8 +15,8 @@ bc.. seriesDefaults: {
           labelLocation: 'nw'  -> ['nw'|'ne'|'sw'|'se']
        }
 }
-p.
-* color defines the lines and label color
+
+p. * color defines the lines and label color
 * yValues defines 1..n lines you want to draw
 * showLabel enables or disables the drawing of the line's y value
 * labelLocation allows you to define the position of a label relative to the line
