@@ -1,0 +1,29 @@
+h1. jpPlot Threshold Lines Renderer Plugin
+
+This plugin enhances jqPlot to draw 1..n horizontal lines at specifiable y values.
+
+h3. Config instructions
+
+After downloading the project copy the file jqplot.canvasThresholdLinesRenderer.js
+to your JavaScript folder.
+In the seriesDefaults part of your jqPlot config add the following part to enable
+and draw threshold lines:
+
+bc.. seriesDefaults: {
+         thresholdLines: {
+            color: '#8f8f8f',
+            yValues: [25.0, 50.0, 75.0, 5.0],
+            showLabel: true,     -> [true|false]
+            labelLocation: 'nw'  -> ['nw'|'ne'|'sw'|'se']
+         }
+     }
+
+* color defines the lines and label color
+* yValues defines 1..n lines you want to draw
+* showLabel enables or disables the drawing of the line's y value
+* labelLocation allows you to define the position of a label relative to the line
+
+h3. Useful links
+
+* "jqPlot Homepage":http://www.jqplot.com
+* "jqPlot Forum":http://groups.google.com/group/jqplot-users
