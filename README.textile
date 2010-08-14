@@ -4,10 +4,8 @@ This plugin enhances jqPlot to draw 1..n horizontal lines at specifiable y value
 
 h3. Config instructions
 
-After downloading the project copy the file jqplot.canvasThresholdLinesRenderer.js
-to your JavaScript folder.
-In the seriesDefaults part of your jqPlot config add the following part to enable
-and draw threshold lines:
+After downloading the project copy the file jqplot.canvasThresholdLinesRenderer.js to your JavaScript folder.
+In the seriesDefaults part of your jqPlot config add the following part to enable and draw threshold lines:
 
 bc.. seriesDefaults: {
        thresholdLines: {
@@ -17,8 +15,7 @@ bc.. seriesDefaults: {
           labelLocation: 'nw'  -> ['nw'|'ne'|'sw'|'se']
        }
 }
-
-
+p.
 * color defines the lines and label color
 * yValues defines 1..n lines you want to draw
 * showLabel enables or disables the drawing of the line's y value
