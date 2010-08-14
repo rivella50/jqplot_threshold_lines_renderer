@@ -7,7 +7,7 @@ h3. Config instructions
 After downloading the project copy the file jqplot.canvasThresholdLinesRenderer.js to your JavaScript folder.
 In the seriesDefaults part of your jqPlot config add the following part to enable and draw threshold lines:
 
-bc.. seriesDefaults: {
+bc. seriesDefaults: {
        thresholdLines: {
           color: '#8f8f8f',
           yValues: [25.0, 50.0, 75.0, 5.0],
@@ -16,7 +16,6 @@ bc.. seriesDefaults: {
        }
 }
 
-p.
 * color defines the lines and label color
 * yValues defines 1..n lines you want to draw
 * showLabel enables or disables the drawing of the line's y value
