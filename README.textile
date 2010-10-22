@@ -1,6 +1,6 @@
 h2. jpPlot Threshold Lines Renderer Plugin
 
-This plugin enhances jqPlot to draw 1..n horizontal lines at specifiable y values.
+This plugin enhances jqPlot to draw 1..n vertical and horizontal lines at specifiable x/y values.
 
 h3. Config instructions
 
@@ -9,16 +9,20 @@ In the seriesDefaults part of your jqPlot config add the following part to enabl
 
 bc. seriesDefaults: {
        thresholdLines: {
-          color: '#8f8f8f',
+          lineColor: '#8f8f8f',
+          labelColor: '#454545',
+          xValues: [33.0, 78.0, 105.0, 155.0],
           yValues: [25.0, 50.0, 75.0, 5.0],
           showLabel: true,     -> [true|false]
           labelLocation: 'nw'  -> ['nw'|'ne'|'sw'|'se']
        }
 }
 
-* color defines the lines and label color
-* yValues defines 1..n lines you want to draw
-* showLabel enables or disables the drawing of the line's y value
+* lineColor defines the lines color
+* labelColor defines the labels color
+* xValues defines 1..n vertical lines you want to draw
+* yValues defines 1..n horizontal lines you want to draw
+* showLabel enables or disables the drawing of the line's x or y value
 * labelLocation allows you to define the position of a label relative to the line
 
 

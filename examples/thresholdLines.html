@@ -27,20 +27,44 @@
   
   $(document).ready(function(){
 
-			line1 = [[1244337000000, 1550], [1244337300000, 1000], [1244337600000, 350], [1244337900000, 770], [1244338200000, 214]];
-			var plot2 = $.jqplot('chart', [line1], {
-    		title: 'Threshold Lines Example',
+			line = [['2009-06-05', 1550], ['2009-06-06', 1000], ['2009-06-07', 350], ['2009-06-08', 770], ['2009-06-09', 214]];
+			//line = [['2009-06-05', 1550], [1244337300000, 1000], [1244337600000, 350], [1244337900000, 770], [1244338200000, 214]];
+			var plot = $.jqplot('chart', [line], {
+    		title: 'Threshold Lines With DateAxisRenderer',
         seriesDefaults: {
 	  			thresholdLines: {
-		        color: '#8f8f8f',
+		        labelColor: '#787878',
+						lineColor: '#555555',
+						xValues: [1244250000000, 1244337400000, 1244467800000],
 						yValues: [1100.0, 780.0, 260.0, 2200.0],
 						showLabel: true,
-						labelLocation: 'se'
+						labelLocation: 'sw'
 	        }
         },
     		axes: {
         	xaxis: {
             renderer: $.jqplot.DateAxisRenderer,
+            numberTicks: 5
+        	}
+    		},
+    		series:[{},{lineWidth:1, color:'#999999', showMarker:false}]
+			});
+			
+			line1 = [[50, 1550], [60, 1000], [70, 350], [80, 770], [90, 214]];
+			var plot1 = $.jqplot('chart1', [line1], {
+    		title: 'Threshold Lines Example with Numeric Axes',
+        seriesDefaults: {
+	  			thresholdLines: {
+		        labelColor: '#333333',
+						lineColor: '#ababab',
+						xValues: [55, 67, 78, 85],
+						yValues: [1100.0, 780.0, 260.0, 2200.0],
+						showLabel: true,
+						labelLocation: 'ne'
+	        }
+        },
+    		axes: {
+        	xaxis: {
             numberTicks: 5
         	}
     		},
@@ -53,7 +77,7 @@
   </script>
   </head>
   <body>
-<?php include "nav.inc"; ?>
     <div id="chart" style="margin-top:20px; margin-left:20px; width:500px; height:400px;"></div>
+		<div id="chart1" style="margin-top:20px; margin-left:20px; width:500px; height:400px;"></div>
   </body>
 </html>
